@@ -15,7 +15,7 @@ class PokemonRepository {
 
   // MARK: - Methods
 
-  Future<List<Pokemon>> getAllPokemons() async {
+  Future<List<Pokemon>> getAll() async {
     const request = const Request(
       method: HTTPMethod.get,
       path: '/pokedex.json',
