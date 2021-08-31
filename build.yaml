@@ -5,10 +5,10 @@ targets:
         generate_for:
           include:
             - lib/**/*state.dart
-            - lib/domain/entity/**/*.dart
+            - lib/domain/entity/**.dart
       json_serializable:
         generate_for:
           include:
-            - lib/domain/entity/**/*.dart
+            - lib/domain/entity/**.dart
         options:
           explicit_to_json: true
