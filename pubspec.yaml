@@ -14,6 +14,7 @@ dependencies:
   dio: ^4.0.0
   pretty_dio_logger: ^1.1.1
   freezed_annotation:
+  provider: ^6.0.0
 
 dev_dependencies:
   flutter_test:
