@@ -44,7 +44,7 @@ class HttpClient {
 
   const HttpClient({
     required this.baseUrl,
-    this.shouldPrettyPrint = true,
+    this.shouldPrettyPrint = false,
   });
 
   // MARK: - Methods
