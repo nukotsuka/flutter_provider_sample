@@ -10,6 +10,9 @@ dependencies:
   flutter:
     sdk: flutter
 
+  # Tools
+  dio: ^4.0.0
+  pretty_dio_logger: ^1.1.1
   freezed_annotation:
 
 dev_dependencies:
