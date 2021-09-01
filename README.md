@@ -1,6 +1,6 @@
-![](https://github.com/nukotsuka/flutter_provider_sample/actions/workflows/ci.yml/badge.svg)
-
 # flutter_provider_sample
+
+![](https://github.com/nukotsuka/flutter_provider_sample/actions/workflows/ci.yml/badge.svg)
 
 A sample Flutter project for Provider.
 Using [pokemon.json](https://github.com/fanzeyi/pokemon.json).
