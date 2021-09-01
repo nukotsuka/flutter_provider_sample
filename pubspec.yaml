@@ -26,3 +26,11 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  fonts:
+    - family: NotoSansCJKjp
+      fonts:
+        - asset: assets/fonts/NotoSansCJKjp-Regular.ttf
+        - asset: assets/fonts/NotoSansCJKjp-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/NotoSansCJKjp-Bold.ttf
+          weight: 700
