@@ -1,3 +1,5 @@
+![](https://github.com/nukotsuka/flutter_provider_sample/workflows/ci/badge.svg)
+
 # flutter_provider_sample
 
 A sample Flutter project for Provider.
