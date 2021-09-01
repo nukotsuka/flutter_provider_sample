@@ -20,9 +20,10 @@ class Pokemon with _$Pokemon {
 }
 
 extension PokemonEx on Pokemon {
-  String get imageURL =>
-      '${AppConfig.pokemonApiEndpoint}/images/${id.toString().padLeft(3, "0")}.png';
+  String get paddedID => id.toString().padLeft(3, '0');
+
+  String get imageURL => '${AppConfig.pokemonApiEndpoint}/images/$paddedID.png';
 
   String get spriteURL =>
-      '${AppConfig.pokemonApiEndpoint}/sprites/${id.toString().padLeft(3, "0")}MS.png';
+      '${AppConfig.pokemonApiEndpoint}/sprites/${paddedID}MS.png';
 }
