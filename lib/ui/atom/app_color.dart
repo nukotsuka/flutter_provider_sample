@@ -9,4 +9,6 @@ class AppColor {
   static const Color subText = Color(0xFF686868);
   static const Color mainBackground = Color(0xFFFFFFFF);
   static const Color subBackground = Color(0xFFF2F2F2);
+  static const Color mainIcon = Color(0xFF324755);
+  static const Color subIcon = Color(0xFF6E8CA0);
 }
