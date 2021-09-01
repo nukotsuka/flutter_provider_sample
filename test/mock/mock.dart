@@ -7,5 +7,8 @@ import 'package:mockito/annotations.dart';
 
   // Repository
   PokemonRepository,
+
+  // Service
+  PokemonService,
 ])
 void main() {}
