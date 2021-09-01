@@ -1,4 +1,4 @@
-![](https://github.com/nukotsuka/flutter_provider_sample/workflows/ci/badge.svg)
+![](https://github.com/nukotsuka/flutter_provider_sample/actions/workflows/ci.yml/badge.svg)
 
 # flutter_provider_sample
 
