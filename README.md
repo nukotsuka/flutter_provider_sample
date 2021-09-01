@@ -1,6 +1,9 @@
 # flutter_provider_sample
 
 A sample Flutter project for Provider.
+Using [pokemon.json](https://github.com/fanzeyi/pokemon.json).
+
+<img src="README_images/screenshot.png" width=50%>
 
 ## Getting Started
 
@@ -27,19 +30,19 @@ bundle exec pod install
 
 ### Provider + StateNotifier + Freezed
 
-- Provider: Provides services and notifiers.
-- StateNotifier: Controllers for a Page.
-- Freezed: Generates entities and states with freezed.
+-   Provider: Provides services and notifiers.
+-   StateNotifier: Controllers for a Page.
+-   Freezed: Generates entities and states with freezed.
 
 ### Repository Pattern
 
-- Entity
-- Repository
-- Service
+-   Entity
+-   Repository
+-   Service
 
 ### Atomic Disign Pattern
 
-- Atom
-- Molecule
-- Organism
-- Page
+-   Atom
+-   Molecule
+-   Organism
+-   Page
