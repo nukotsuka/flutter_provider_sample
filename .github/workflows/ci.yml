@@ -1,0 +1,43 @@
+name: CI
+on: [push]
+env:
+  FLUTTER_VERSION: "2.2.3"
+  FLUTTER_CHANNEL: "stable"
+  JAVA_VERSION: "1.8.x"
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Setup java
+        uses: actions/setup-java@v1
+        with:
+          java-version: ${{ env.JAVA_VERSION }}
+
+      - name: Cache Flutter dependencies
+        uses: actions/cache@v1
+        with:
+          path: /opt/hostedtoolcache/flutter
+          key: ${{ runner.OS }}-flutter-${{ env.FLUTTER_VERSION }}
+
+      - name: Setup flutter
+        uses: subosito/flutter-action@v1
+        with:
+          flutter-version: ${{ env.FLUTTER_VERSION }}
+          channel: ${{ env.FLUTTER_CHANNEL }}
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Generate files
+        run: make gen/build
+
+      - name: Analyze
+        run: flutter analyze
+
+      - name: Test
+        run: flutter test
