@@ -89,7 +89,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  cocoapods (~> 1.10.1)
+  cocoapods (~> 1.10.2)
 
 BUNDLED WITH
    2.1.4
