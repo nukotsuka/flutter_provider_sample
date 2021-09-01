@@ -7,6 +7,7 @@ class PokemonListItem extends StatelessWidget {
   // MARK: - Const
 
   static const double _cardRadius = 16;
+  static const double _stripeImageSize = 40;
 
   // MARK: - Variables
 
@@ -25,6 +26,8 @@ class PokemonListItem extends StatelessWidget {
     return CachedNetworkImage(
       imageUrl: pokemon.spriteURL,
       fit: BoxFit.cover,
+      width: _stripeImageSize,
+      height: _stripeImageSize,
     );
   }
 
@@ -33,16 +36,38 @@ class PokemonListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.fromLTRB(16, 16, 16, 24),
+      padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         color: AppColor.mainBackground,
         borderRadius: BorderRadius.circular(_cardRadius),
         boxShadow: [AppShadow.card],
       ),
-      child: Column(
+      child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           _spriteImage(),
+          const SizedBox(width: 8),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'No.${pokemon.paddedID}',
+                style: AppTextStyle.medium(
+                  fontSize: 12,
+                  color: AppColor.subText,
+                ),
+              ),
+              Text(
+                pokemon.name.japanese,
+                style: AppTextStyle.bold(fontSize: 14),
+              ),
+            ],
+          ),
+          const Spacer(),
+          const Icon(
+            Icons.keyboard_arrow_right_rounded,
+            color: AppColor.subIcon,
+          ),
         ],
       ),
     );

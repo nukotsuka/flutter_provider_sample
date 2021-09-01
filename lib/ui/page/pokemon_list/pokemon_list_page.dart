@@ -22,7 +22,7 @@ class PokemonListPage extends StatelessWidget {
       itemBuilder: (context, index) {
         final pokemon = pokemons[index];
         return Padding(
-          padding: const EdgeInsets.only(bottom: 24),
+          padding: const EdgeInsets.only(bottom: 16),
           child: PokemonListItem(
             key: Key(pokemon.id.toString()),
             pokemon: pokemon,
