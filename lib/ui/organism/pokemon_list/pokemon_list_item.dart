@@ -31,6 +31,15 @@ class PokemonListItem extends StatelessWidget {
     );
   }
 
+  Chip _typeChip(PokemonType type) {
+    return Chip(
+      label: Text(type.jpName),
+      labelStyle: AppTextStyle.bold(fontSize: 10, color: Colors.white),
+      backgroundColor: Color(type.colorCode),
+      visualDensity: VisualDensity.comfortable,
+    );
+  }
+
   // MARK: - Layout
 
   @override
@@ -64,6 +73,11 @@ class PokemonListItem extends StatelessWidget {
             ],
           ),
           const Spacer(),
+          Wrap(
+            spacing: 8,
+            children: pokemon.type.map(_typeChip).toList(),
+          ),
+          const SizedBox(width: 8),
           const Icon(
             Icons.keyboard_arrow_right_rounded,
             color: AppColor.subIcon,
