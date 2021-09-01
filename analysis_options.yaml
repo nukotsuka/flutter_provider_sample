@@ -2,6 +2,7 @@ analyzer:
   exclude:
     - "**/*.g.dart"
     - "**/*.freezed.dart"
+    - "**/*.mocks.dart"
   errors:
     missing_required_param: warning
     missing_return: warning
