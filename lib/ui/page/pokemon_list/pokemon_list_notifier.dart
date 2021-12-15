@@ -1,7 +1,11 @@
 import 'package:flutter_provider_sample/domain/index.dart';
+import 'package:flutter_state_notifier/flutter_state_notifier.dart';
 import 'package:state_notifier/state_notifier.dart';
 
 import 'pokemon_list_state.dart';
+
+typedef PokemonListNotifierProvider
+    = StateNotifierProvider<PokemonListNotifier, PokemonListState>;
 
 class PokemonListNotifier extends StateNotifier<PokemonListState>
     with LocatorMixin {

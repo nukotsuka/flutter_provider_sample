@@ -3,7 +3,6 @@ import 'package:flutter_provider_sample/app_config.dart';
 import 'package:flutter_provider_sample/domain/http_client.dart';
 import 'package:flutter_provider_sample/domain/index.dart';
 import 'package:flutter_provider_sample/ui/index.dart';
-import 'package:flutter_state_notifier/flutter_state_notifier.dart';
 import 'package:provider/provider.dart';
 
 class App extends StatelessWidget {
@@ -26,10 +25,7 @@ class App extends StatelessWidget {
       ],
       child: MaterialApp(
         title: 'Pokemon',
-        home: StateNotifierProvider<PokemonListNotifier, PokemonListState>(
-          create: (_) => PokemonListNotifier(),
-          child: const PokemonListPage(),
-        ),
+        home: PokemonListPage.inProvider(),
       ),
     );
   }

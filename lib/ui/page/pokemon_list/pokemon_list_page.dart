@@ -12,6 +12,13 @@ class PokemonListPage extends StatelessWidget {
 
   const PokemonListPage();
 
+  static PokemonListNotifierProvider inProvider() {
+    return PokemonListNotifierProvider(
+      create: (_) => PokemonListNotifier(),
+      child: const PokemonListPage(),
+    );
+  }
+
   // MARK: - Views
 
   ListView _pokemonListView(BuildContext context) {
